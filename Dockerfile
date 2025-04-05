@@ -2,10 +2,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-COPY *.csproj ./
+COPY chatting/*.csproj ./  # 👈 Ye change kara hai
 RUN dotnet restore
 
-COPY . ./
+COPY chatting/. ./         # 👈 Saari chatting folder ki files copy karo
 RUN dotnet publish -c Release -o out
 
 # Runtime stage
