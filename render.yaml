@@ -1,9 +1,10 @@
 services:
   - type: web
     name: chatapp1
-    runtime: dotnet-core
     branch: main
     rootDir: chatting
-    buildCommand: dotnet build
-    startCommand: dotnet ChatClone.dll
-    autoDeploy: true
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/ChatClone.dll
+    env: 
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
