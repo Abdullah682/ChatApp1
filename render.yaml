@@ -1,7 +1,7 @@
 services:
   - type: web
     name: chatapp1
-    runtime: dotnet
+    runtime: dotnet-core
     branch: main
     rootDir: chatting
     buildCommand: dotnet build
