@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: chatapp
+    name: chatapp1
     runtime: dotnet
     branch: main
+    rootDir: chatting
     buildCommand: dotnet build
     startCommand: dotnet ChatClone.dll
     autoDeploy: true
